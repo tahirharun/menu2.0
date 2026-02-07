@@ -1,0 +1,284 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0f0f0f;
+  color: white;
+  line-height: 1.6;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10%;
+  background-color: #1a1a1a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ff6600;
+}
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5% 10%;
+  gap: 2rem;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.hero-text span {
+  color: #ff6600;
+}
+
+.hero-text p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.hero-buttons {
+  margin: 1.5rem 0;
+}
+
+.hero-buttons button {
+  background-color: #ff6600;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  color: white;
+}
+
+.hero-buttons button:hover {
+  background-color: #e55b00;
+}
+
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.hero-highlights div {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 200px;
+  text-align: center;
+}
+.hero-image {
+  flex-shrink: 0;
+}
+
+.hero-image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ff6600;
+  transition: transform 0.3s;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+.menu {
+  padding: 4rem 10%;
+  text-align: center;
+}
+
+.menu h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.menu p {
+  color: #ccc;
+  margin-bottom: 3rem;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.menu-card {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 15px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.menu-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.menu-card h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.menu-card p {
+  margin: 0.5rem 0;
+  color: #ccc;
+}
+
+.menu-card .price {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.menu-card:hover {
+  transform: scale(1.05);
+}
+.about, .contact, .reservation {
+  padding: 4rem 10%;
+  text-align: center;
+}
+
+.about h2, .contact h2, .reservation h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about p, .contact p, .reservation p {
+  color: #ccc;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+#reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 2rem auto 0 auto;
+}
+
+#reservation-form input,
+#reservation-form select,
+#reservation-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 1rem;
+}
+
+#reservation-form input::placeholder,
+#reservation-form textarea::placeholder {
+  color: #ccc;
+}
+
+#reservation-form button {
+  background-color: #ff6600;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#reservation-form button:hover {
+  background-color: #e55b00;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: 200px;
+    margin-top: 1rem;
+  }
+
+  .hero-highlights {
+    justify-content: center;
+  }
+
+  .menu-items {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-image img {
+    width: 150px;
+    height: 150px;
+  }
+}

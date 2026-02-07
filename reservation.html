@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve a Table | Savorelle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Savorelle</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="reservation.html">Reserve</a></li>
+    </ul>
+  </nav>
+  <section class="reservation">
+    <h2>Reserve a Table</h2>
+    <p>Book your table online and enjoy an unforgettable dining experience.</p>
+    <form id="reservation-form">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="date" name="date" required>
+      <input type="time" name="time" required>
+      <button type="submit">Reserve Now</button>
+    </form>
+  </section>
+  <script>
+    const form = document.getElementById('reservation-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = form.name.value;
+      const email = form.email.value;
+      const phone = form.phone.value;
+      const date = form.date.value;
+      const time = form.time.value;
+
+      alert(`Thank you, ${name}! Your table is reserved on ${date} at ${time}. We will contact you at ${email} or ${phone}.`);
+      form.reset();
+    });
+  </script>
+</body>
+</html>
